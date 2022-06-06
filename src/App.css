@@ -1,38 +1,195 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  color: #59595b;
+  overflow-x: hidden;
+}
+
+li > *,
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-family: "Bebas Neue", cursive;
+  flex-direction: row;
+  padding: 35px 5%;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+}
+nav img{
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+nav li > *:hover,
+nav li > *:focus {
+  color: #e8521f;
+}
+nav > .main-button{
+  margin-right: 140px;
+}
+.main-button {
+  padding: 10px 18px;
+  border-radius: 7px;
+  font-family: "Bebas Neue", cursive;
+  background: #e8521f 0% 0% no-repeat padding-box;
+  text-align: center;
+  border: solid 3px #e8521f;
+  width: 250px;
+  color: white;
+  font-size: 25px;
+  
+}
+
+.main-button:hover {
+  background-color: white;
+  border: solid 3px #e8521f;
+  color: #e8521f;
+}
+
+.main-container h1,
+.sofunk-container h1,
+.info-container h1,
+.sponsor-container h1,
+.bots-container h1,
+.team-container h1 {
+  font-family: "Bebas Neue", cursive;
+  opacity: 90%;
+  font-size: 100px;
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.main-container p,
+.sofunk-container p,
+.info-container p,
+.sponsor-container p,
+.bots-container p,
+.team-container p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  text-align: center;
+  padding-left: 140px;
+  padding-right: 140px;
+}
+.main-container h3 {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container ul {
+  padding-left: 140px;
+  padding-right: 140px;
+  list-style-type: "-";
+  text-align: "left";
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+}
+.main-container .main-button {
+  margin: auto;
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  font-size: 25px;
+  width: 160px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-bottom__text {
+  color: #e8521f;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin-bottom: 400px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-link{
+  color: #e8521f;
+}
+.main-text__small{
+  font-size: 20px;
+}
+.sofunk-container,
+.info-container,
+.sponsor-container,
+.team-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.team-img__box{
+  display: flex;
+  margin-top: 100px;
+
+}
+.team-img__holder{
+  text-align: center;
+}
+.team-img__holder p {
+  font-size: 20px;
+  padding: 0px 50px;
+}
+.team-img__holder h3{
+  font-size: 25px;
+  font-family: "Bebas Neue", cursive;
+
 }
 
-.App-link {
-  color: #61dafb;
+.team-bottom__text{
+  color: #e8521f;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+
+}
+.team-button{
+  margin-bottom: 120px;
+}
+.sofunk-icons__box {
+  display: flex;
+  width: 100%;
+  width: 90%;
+  align-self: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sofunk-icons__box p {
+  padding: 20px;
+}
+
+.sofunk-icons__holder img{
+  display: block;
+  margin: auto;
+}
+footer {
+  background-color: #59595b;
+  display: flex;
+  flex-direction: row;
+  height: 150px;
+  justify-content: space-between;
+}
+.footer-text {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  justify-content: space-around;
+}
+.footer-text p {
+  color: #87878b;
+  font-size: 20px;
+  font-family: "Bebas Neue", cursive;
+}
+.slider-box {
+  width: 100%;
+  height: 600px;
+}
+
+.slider-element img{
+  margin: auto;
 }

@@ -58,7 +58,7 @@ export default function SoFunk() {
           </a>
         </p>
 
-        <a className="main-button" href="">jetzt bewerben</a>
+        <a className="main-button" href="#">jetzt bewerben</a>
         <p>
           *die Teilnahme ist vollkommen kostenfrei und verpflichtet zu nichts.
           Wir wollen weder deine Daten, noch wollen wir dich mit Werbung

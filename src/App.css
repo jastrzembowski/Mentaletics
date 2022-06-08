@@ -103,6 +103,10 @@ nav > .main-button{
   font-size: 25px;
   width: 160px;
 }
+.main-container .main-button:hover {
+color: #e8521f;
+
+}
 
 .main-bottom__text {
   color: #e8521f;

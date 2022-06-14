@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 * {
   color: #59595b;
-  overflow-x: hidden;
 }
 
 li > *,
@@ -12,7 +11,6 @@ a {
 
 nav {
   display: flex;
-  width: 100%;
   justify-content: space-around;
   font-family: "Bebas Neue", cursive;
   flex-direction: row;
@@ -21,12 +19,14 @@ nav {
 }
 nav ul {
   display: flex;
-  width: 80%;
+  width: 60%;
   justify-content: space-around;
   list-style-type: none;
   padding: 0;
+  text-align: center;
 }
-nav img{
+
+nav img {
   display: block;
   width: 100px;
   height: 100px;
@@ -35,8 +35,8 @@ nav li > *:hover,
 nav li > *:focus {
   color: #e8521f;
 }
-nav > .main-button{
-  margin-right: 140px;
+nav > .main-button {
+  margin-right: 40px;
 }
 .main-button {
   padding: 10px 18px;
@@ -48,7 +48,6 @@ nav > .main-button{
   width: 250px;
   color: white;
   font-size: 25px;
-  
 }
 
 .main-button:hover {
@@ -56,13 +55,18 @@ nav > .main-button{
   border: solid 3px #e8521f;
   color: #e8521f;
 }
-
+.agb-container{
+  height: 60vh;
+}
 .main-container h1,
 .sofunk-container h1,
 .info-container h1,
 .sponsor-container h1,
 .bots-container h1,
-.team-container h1 {
+.team-container h1,
+.agb-container h1,
+.daten-container h1,
+.imp-container h1 {
   font-family: "Bebas Neue", cursive;
   opacity: 90%;
   font-size: 100px;
@@ -75,7 +79,9 @@ nav > .main-button{
 .info-container p,
 .sponsor-container p,
 .bots-container p,
-.team-container p {
+.team-container p,
+.daten-container p,
+.imp-container p {
   font-family: "Montserrat", sans-serif;
   font-size: 25px;
   text-align: center;
@@ -104,21 +110,43 @@ nav > .main-button{
   width: 160px;
 }
 .main-container .main-button:hover {
-color: #e8521f;
+  color: #e8521f;
+}
+.bg-holder{
+  height: 100%;
+  margin-top: -330px;
 
 }
 
+.bg-holder::before{
+  content: " ";
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  padding-top: 100px;
+  padding-bottom: 200px; 
+  opacity: .15; 
+  z-index: -1;
+  background: url(images/bgmain.jpg)  0% 0% no-repeat padding-box;
+  background-size: cover;
+  background-position: center;
+}
+.main-container{
+  padding-top: 300px;
+}
 .main-bottom__text {
   color: #e8521f;
   font-size: 25px;
   font-family: "Montserrat", sans-serif;
   text-align: center;
-  margin-bottom: 400px;
+  margin-bottom: 300px;
 }
-.main-link{
+.main-link {
   color: #e8521f;
 }
-.main-text__small{
+.main-text__small {
   font-size: 20px;
 }
 .sofunk-container,
@@ -129,31 +157,55 @@ color: #e8521f;
   flex-direction: column;
   align-items: center;
 }
-.team-img__box{
+.team-img__box {
   display: flex;
   margin-top: 100px;
-
 }
-.team-img__holder{
+.team-img__holder {
   text-align: center;
+}
+.team-img__holder img{
+  width: 80%;
 }
 .team-img__holder p {
   font-size: 20px;
   padding: 0px 50px;
 }
-.team-img__holder h3{
+.team-img__holder h3 {
   font-size: 25px;
   font-family: "Bebas Neue", cursive;
-
 }
 
-.team-bottom__text{
+.form-holder{
+  display: flex;
+flex-direction: column;
+}
+.input-box{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+.input-box input{
+  padding: 10px 30px;
+  font-size: 24px;
+  width: 422px;
+  font-family: "Bebas Neue", cursive;
+  color: #87878B;
+  background-color: #E6E6E6;
+  border: solid 1px #707070 ;
+  border-radius: 8px;
+  opacity: 0.85;
+
+
+}
+.team-bottom__text {
   color: #e8521f;
   font-size: 20px;
   font-family: "Montserrat", sans-serif;
-
 }
-.team-button{
+.team-button {
   margin-bottom: 120px;
 }
 .sofunk-icons__box {
@@ -162,12 +214,19 @@ color: #e8521f;
   width: 90%;
   align-self: center;
 }
-
+.sofunk-icons__holder i{
+  font-size: 60px;
+  align-self: center;
+}
 .sofunk-icons__box p {
   padding: 20px;
 }
-
-.sofunk-icons__holder img{
+.sofunk-icons__holder{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.sofunk-icons__holder img {
   display: block;
   margin: auto;
 }
@@ -178,22 +237,73 @@ footer {
   height: 150px;
   justify-content: space-between;
 }
+.footer-icons {
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+}
+
+.footer-icons > a {
+  height: 50px;
+  margin: 10px;
+  cursor: pointer;
+}
+
 .footer-text {
   display: flex;
   align-items: center;
-  width: 40%;
+  width: 30%;
   justify-content: space-around;
 }
 .footer-text p {
   color: #87878b;
   font-size: 20px;
   font-family: "Bebas Neue", cursive;
+  cursor: pointer;
 }
 .slider-box {
-  width: 100%;
+  width: 90%;
   height: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.slider-element img{
+
+.slider-element img {
+  width: 16vw;
+  height: 16vw;
+  object-fit: cover;
+  border-radius: 20px;
   margin: auto;
+}
+.slick-prev:before {
+  content: "\A";
+  border-style: solid;
+  border-width: 20px 30px 20px 0;
+  border-color: transparent #e8521f transparent;
+  position: absolute;
+  bottom: 25px;
+  right: 20px;
+  z-index: 20;
+}
+.slick-slide > div{
+  display: flex;
+  justify-content: center;
+}
+
+.slick-next:before {
+  content: "\A";
+  border-style: solid;
+  border-width: 20px 30px 20px 0;
+  border-color: transparent #e8521f transparent;
+  position: absolute;
+  transform: rotate(180deg);
+  bottom: 25px;
+  font-size: 30px;
+}
+.slider-element p {
+  padding-left: 20px;
+  padding-right: 20px;
 }

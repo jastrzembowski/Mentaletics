@@ -5,7 +5,7 @@ import Footer from "./Footer";
 export default function Imprissum() {
   return (
     <>
-      <div>
+      <div className="imp-container">
         <h1>IMPRESSUM</h1>
         <p>
           Angaben gemäß § 5 TMG KOMPASS Sportmentoring GmbH Kreuzbergstraße 55

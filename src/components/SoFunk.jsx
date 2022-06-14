@@ -14,31 +14,27 @@ export default function SoFunk() {
         </p>
         <div className="sofunk-icons__box">
           <div className="sofunk-icons__holder">
-            <img src="https://via.placeholder.com/150" alt="person"></img>
-
+            <i class="fa-solid fa-user-plus"></i>
             <p>
               Bewirb dich mit deiner E-Mail-Adresse und deinem Namen für die
               Verlosung
             </p>
           </div>
           <div className="sofunk-icons__holder">
-            <img src="https://via.placeholder.com/150" alt="person"></img>
-
+            <i class="fa-solid fa-envelope-circle-check"></i>
             <p>
               Du bekommst dann von uns eine Bestätigungs-Mail mit einem Link
             </p>
           </div>
           <div className="sofunk-icons__holder">
-            <img src="https://via.placeholder.com/150" alt="person"></img>
-
+            <i class="fa-solid fa-link"></i>
             <p>
               Schließe deine Registrierung ab, indem du auf den Link in der Mail
               klickst
             </p>
           </div>
           <div className="sofunk-icons__holder">
-            <img src="https://via.placeholder.com/150" alt="person"></img>
-
+            <i class="fa-solid fa-gift"> </i>{" "}
             <p>
               Sobald ein Code verfügbar ist, bekommst du diesen in einer
               weiteren Mail zugeschickt
@@ -58,7 +54,9 @@ export default function SoFunk() {
           </a>
         </p>
 
-        <a className="main-button" href="https://youngster.ec3l.com/badges">jetzt bewerben</a>
+        <a className="main-button" href="https://youngster.ec3l.com/badges">
+          jetzt bewerben
+        </a>
         <p>
           *die Teilnahme ist vollkommen kostenfrei und verpflichtet zu nichts.
           Wir wollen weder deine Daten, noch wollen wir dich mit Werbung

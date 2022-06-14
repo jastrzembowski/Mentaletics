@@ -1,6 +1,17 @@
 import React from "react";
 import Footer from "./Footer";
 import Slider from "react-slick";
+import carsten from "../images/carsten.jpeg"
+import daniel from "../images/daniel.jpeg"
+import hans from "../images/hans.jpeg"
+import lean from "../images/lean.jpeg"
+import marcel from "../images/marcel.jpeg"
+import markus from "../images/markus.jpeg"
+import max from "../images/max.jpeg"
+import nessi from "../images/nessi.jpeg"
+import sandy from "../images/sandy.jpeg"
+import thor from "../images/Thor.jpeg"
+import vanes from "../images/vanes.jpeg"
 
 export default function Bots() {
   const settings = {
@@ -8,8 +19,8 @@ export default function Bots() {
     slidesToScroll: 4,
     autoplay: false,
     dots: false,
-    arrows: false,
-    infinite: true,
+    arrows: true,
+    infinite: false,
   };
   return (
     <>
@@ -24,36 +35,48 @@ export default function Bots() {
         <div className="slider-box">
           <Slider {...settings}>
             <div className="slider-element">
-              <img src="https://via.placeholder.com/300" alt="person"></img>
+              <img src={carsten} alt="person"></img>
               <p>Carsten Stahl</p>
             </div>
             <div className="slider-element">
-              <img src="https://via.placeholder.com/300" alt="person"></img>
-              <p>Carsten Stahl</p>
+              <img src={sandy} alt="person"></img>
+              <p>Sandy Fahse</p>
             </div>{" "}
             <div className="slider-element">
-              <img src="https://via.placeholder.com/300" alt="person"></img>
-              <p>Carsten Stahl</p>
+              <img src={thor} alt="person"></img>
+              <p>Thorsten Havener</p>
             </div>{" "}
             <div className="slider-element">
-              <img src="https://via.placeholder.com/300" alt="person"></img>
-              <p>Carsten Stahl</p>
+              <img src={vanes} alt="person"></img>
+              <p>Vanessa Gebhardt</p>
             </div>{" "}
             <div className="slider-element">
-              <img src="https://via.placeholder.com/300" alt="person"></img>
-              <p>Carsten Stahl</p>
+              <img src={lean} alt="person"></img>
+              <p>Leandro Barreiro</p>
             </div>{" "}
             <div className="slider-element">
-              <img src="https://via.placeholder.com/300" alt="person"></img>
-              <p>Carsten Stahl</p>
+              <img src={marcel} alt="person"></img>
+              <p>Marcel Risse</p>
             </div>{" "}
             <div className="slider-element">
-              <img src="https://via.placeholder.com/300" alt="person"></img>
-              <p>Carsten Stahl</p>
+              <img src={markus} alt="person"></img>
+              <p>Markus Hofmann</p>
             </div>{" "}
             <div className="slider-element">
-              <img src="https://via.placeholder.com/300" alt="person"></img>
-              <p>Carsten Stahl</p>
+              <img src={max} alt="person"></img>
+              <p>Max Planer</p>
+            </div>
+            <div className="slider-element">
+              <img src={nessi} alt="person"></img>
+              <p>Nessi</p>
+            </div>
+            <div className="slider-element">
+              <img src={hans} alt="person"></img>
+              <p>Hans Sarpei</p>
+            </div>
+            <div className="slider-element">
+              <img src={daniel} alt="person"></img>
+              <p>Daniel Jung</p>
             </div>
           </Slider>
         </div>

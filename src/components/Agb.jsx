@@ -3,7 +3,7 @@ import Footer from "./Footer";
 export default function Agb() {
   return (
     <>
-      <div>
+      <div className="agb-container">
         <h1>AGB</h1>
       </div>
       <Footer />

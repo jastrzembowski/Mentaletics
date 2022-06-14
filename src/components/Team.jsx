@@ -1,5 +1,9 @@
 import React from "react";
 import Footer from "./Footer";
+import unserchris from "../images/unserchris.png"
+import unserclara from "../images/unserclara.png"
+import unserscharon from "../images/unserscharon.png"
+
 export default function Team() {
   return (
     <>
@@ -26,7 +30,7 @@ export default function Team() {
         </p>
         <div className="team-img__box">
           <div className="team-img__holder">
-          <img src="https://via.placeholder.com/300" alt="person"></img>
+          <img src={unserscharon} alt="person"></img>
             <h3>Sharon Paschke</h3>
             <p>
               Sharon Paschke ist Mentaltrainer und Sportmentor. Sharon hat als
@@ -39,7 +43,7 @@ export default function Team() {
             </p>
           </div>
           <div className="team-img__holder">
-          <img src="https://via.placeholder.com/300" alt="person"></img>
+          <img src={unserchris} alt="person"></img>
 
             <h3>Christian Pander</h3>
             <p>
@@ -53,7 +57,7 @@ export default function Team() {
           </div>
 
           <div className="team-img__holder">
-          <img src="https://via.placeholder.com/300" alt="person"></img>
+          <img src={unserclara} alt="person"></img>
 
             <h3>Clara Fabry</h3>
             <p>

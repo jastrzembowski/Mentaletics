@@ -19,7 +19,7 @@ export default function Sponsor() {
           Ihnen an dieser so wichtigen Mission zu arbeiten!
         </p>
 
-        <p style={{marginTop: "600px", color:"#e8521f"}}>
+        <p className="spons-text">
           Ihr Unternehmen möchte auch einer unserer Sponsor:innen werden?
         </p>
            <Link to="/" style={{marginBottom: "100px"}}><span className="main-button" > mehr erfahren</span> </Link>

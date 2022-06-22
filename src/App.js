@@ -1,11 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./App.css";
 import Footer from "./components/Footer";
 import emailjs from "@emailjs/browser";
 
 function App() {
   const form = useRef();
-
+  const [isActive, setIsActive] = useState(true);
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -17,13 +17,8 @@ function App() {
         "Fwu-YC9ODO89HFfJw"
       )
       .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+        setIsActive(!isActive)
+        );
   };
 
   return (
@@ -86,12 +81,26 @@ function App() {
           <br />
           Also bewirb dich direkt hier!
         </p>
-
+{ isActive &&
         <form ref={form} onSubmit={sendEmail} className="form-holder">
-        <div className="input-box">  <input type="text" name="user_name" placeholder="NAME" />
-          <input type="email" name="user_email" placeholder="E-MAIL-ADRESSE" />
-          </div>   <input type="submit" className="main-button" value="jetzt bewerben" />
+          <div className="input-box">
+            {" "}
+            <input type="text" name="user_name" required placeholder="NAME" />
+            <input
+              type="email"
+              name="user_email"
+              required
+              placeholder="E-MAIL-ADRESSE"
+            />
+          </div>{" "}
+          <input type="submit" className="main-button" value="jetzt bewerben" />
         </form>
+}
+{!isActive && 
+  <p className="input-after">
+    Vielen Dank! Deine Registrierungs-Mail sollte innerhalb weniger Minuten ankommen. Bitte bestätige deine Registrierung durch Klicken auf den Link in der Mail.
+  </p>
+}
         <p className="main-bottom__text">
           Folgende Exklusiv-Partner unterstützen die „Aktion 100.000“ in
           vielfältiger Art und Weise und stellen so die Zugänge zum

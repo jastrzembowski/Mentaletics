@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 export default function SoFunk() {
   return (
@@ -85,7 +86,8 @@ export default function SoFunk() {
         <p>
           Den Code einlösen kannst du unter
           <a href="https://youngster.ec3l.com/badges" className="main-link">
-            youngster.mentaletics.com{" "}
+            {" "}
+            youngster.mentaletics.com
           </a>
           . Hier musst du dich mit deiner E-Mail registrieren und erhältst
           Zugriff auf eine Vielzahl an Artikeln, Übungen und spannenden Podcasts
@@ -98,10 +100,12 @@ export default function SoFunk() {
           <br /> Wir wünschen dir viel Spaß bei MENTALetics®!
         </p>
 
-        <div className="main-button" style={{ marginBottom: "150px" }}>
+        <Link to="/">
           {" "}
-          Jetzt einlösen
-        </div>
+          <div className="main-button" style={{ marginBottom: "150px" }}>
+            Jetzt einlösen
+          </div>{" "}
+        </Link>
       </div>
 
       <Footer />

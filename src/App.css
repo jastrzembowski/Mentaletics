@@ -25,7 +25,9 @@ nav ul {
   padding: 0;
   text-align: center;
 }
-
+nav .menu-btn {
+  display: none;
+}
 nav img {
   display: block;
   width: 100px;
@@ -48,14 +50,19 @@ nav > .main-button {
   width: 250px;
   color: white;
   font-size: 25px;
+  cursor: pointer;
 }
-
+.input-after{
+  color: #e8521f;
+  width: 40%;
+  margin: auto;
+}
 .main-button:hover {
   background-color: white;
   border: solid 3px #e8521f;
   color: #e8521f;
 }
-.agb-container{
+.agb-container {
   height: 60vh;
 }
 .main-container h1,
@@ -88,6 +95,10 @@ nav > .main-button {
   padding-left: 140px;
   padding-right: 140px;
 }
+.spons-text {
+  margin-top: 600px;
+  color: #e8521f;
+}
 .main-container h3 {
   font-size: 25px;
   font-weight: bold;
@@ -112,28 +123,27 @@ nav > .main-button {
 .main-container .main-button:hover {
   color: #e8521f;
 }
-.bg-holder{
+.bg-holder {
   height: 100%;
   margin-top: -330px;
-
 }
 
-.bg-holder::before{
+.bg-holder::before {
   content: " ";
   position: fixed;
-  top: 0; 
+  top: 0;
   left: 0;
-  width: 100%; 
+  width: 100%;
   height: 100%;
   padding-top: 100px;
-  padding-bottom: 200px; 
-  opacity: .15; 
+  padding-bottom: 200px;
+  opacity: 0.15;
   z-index: -1;
-  background: url(images/bgmain.jpg)  0% 0% no-repeat padding-box;
+  background: url(images/bgmain.jpg) 0% 0% no-repeat padding-box;
   background-size: cover;
   background-position: center;
 }
-.main-container{
+.main-container {
   padding-top: 300px;
 }
 .main-bottom__text {
@@ -164,7 +174,7 @@ nav > .main-button {
 .team-img__holder {
   text-align: center;
 }
-.team-img__holder img{
+.team-img__holder img {
   width: 80%;
 }
 .team-img__holder p {
@@ -176,29 +186,27 @@ nav > .main-button {
   font-family: "Bebas Neue", cursive;
 }
 
-.form-holder{
+.form-holder {
   display: flex;
-flex-direction: column;
+  flex-direction: column;
 }
-.input-box{
+.input-box {
   display: flex;
   justify-content: space-around;
   margin-top: 60px;
   margin-bottom: 50px;
 }
 
-.input-box input{
+.input-box input {
   padding: 10px 30px;
   font-size: 24px;
   width: 422px;
   font-family: "Bebas Neue", cursive;
-  color: #87878B;
-  background-color: #E6E6E6;
-  border: solid 1px #707070 ;
+  color: #87878b;
+  background-color: #e6e6e6;
+  border: solid 1px #707070;
   border-radius: 8px;
   opacity: 0.85;
-
-
 }
 .team-bottom__text {
   color: #e8521f;
@@ -214,14 +222,14 @@ flex-direction: column;
   width: 90%;
   align-self: center;
 }
-.sofunk-icons__holder i{
+.sofunk-icons__holder i {
   font-size: 60px;
   align-self: center;
 }
 .sofunk-icons__box p {
   padding: 20px;
 }
-.sofunk-icons__holder{
+.sofunk-icons__holder {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
@@ -270,7 +278,6 @@ footer {
   justify-content: center;
 }
 
-
 .slider-element img {
   width: 16vw;
   height: 16vw;
@@ -288,11 +295,13 @@ footer {
   right: 20px;
   z-index: 20;
 }
-.slick-slide > div{
+.slick-slide > div {
   display: flex;
   justify-content: center;
 }
-
+.slick-next {
+  right: -25px;
+}
 .slick-next:before {
   content: "\A";
   border-style: solid;
@@ -306,4 +315,210 @@ footer {
 .slider-element p {
   padding-left: 20px;
   padding-right: 20px;
+}
+.main-small{
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  .main-small{
+    display: block;
+   
+  }
+  .main-small a{
+    color: #e8521f;
+  }
+  .menu {
+    position: absolute;
+    top: -1000px;
+    left: 0px;
+    background-color: black;
+    width: 100%;
+    padding: 2px;
+    margin: 0px;
+    transition: 0.1s ease-in-out;
+  }
+  .menu-icon {
+    display: block;
+    z-index: 15;
+  }
+  .menu li {
+    width: 100%;
+  }
+  nav .menu li {
+    width: 100%;
+    height: 15px;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+
+    z-index: 10;
+    font-size: 22px;
+    border: 1px solid rgba(38, 38, 38, 0.03);
+  }
+  .main-button {
+    display: none;
+  }
+  nav .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  nav .menu-icon .nav-icon {
+    background-color: #15161c;
+    display: block;
+    height: 3px;
+    position: relative;
+    transition: background 0.2s ease-out;
+    width: 34px;
+  }
+  nav .menu-icon .nav-icon:before,
+  nav .menu-icon .nav-icon:after {
+    background: #f8f8f8;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all ease-out 0.2s;
+    width: 100%;
+  }
+  nav .menu-icon .nav-icon:before {
+    top: 9px;
+    background-color: #15161c;
+  }
+  nav .menu-icon .nav-icon:after {
+    top: -9px;
+    background-color: #3d2514;
+  }
+  nav .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+  }
+  nav .menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top: 0;
+    background-color: #15161c;
+  }
+  nav .menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top: 0;
+    background-color: #15161c;
+  }
+  nav .menu-btn {
+    display: none;
+  }
+  nav .menu-btn:checked ~ .menu {
+    display: block;
+    z-index: 10;
+    position: absolute;
+    top: 0px;
+    padding-top: 115px;
+    left: 0px;
+    box-shadow: 0 0 2em black;
+    background-color: white;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  nav {
+    justify-content: space-between;
+    padding: 5px;
+  }
+  .main-container h1 {
+    margin: 10px;
+    padding: auto;
+  }
+
+  .main-container ul {
+    padding: 10px;
+    font-size: 17px;
+  }
+  .input-box {
+    display: inline;
+    text-align: center;
+  }
+  .input-after{
+    width: 95%;
+  }
+  .input-box input {
+    width: 300px;
+    margin: 5px;
+  }
+  footer {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .footer-text {
+    width: 100%;
+  }
+  .footer-icons {
+    margin-left: 0px;
+  }
+  .main-container h1,
+  .sofunk-container h1,
+  .info-container h1,
+  .sponsor-container h1,
+  .bots-container h1,
+  .team-container h1,
+  .agb-container h1,
+  .daten-container h1,
+  .imp-container h1 {
+    font-size: 50px;
+    padding: 0px;
+  }
+  .main-container p,
+  .sofunk-container p,
+  .info-container p,
+  .sponsor-container p,
+  .bots-container p,
+  .team-container p,
+  .daten-container p,
+  .imp-container p {
+    font-size: 17px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .sofunk-icons__holder i {
+    font-size: 30px;
+  }
+  .sofunk-container p {
+    font-size: 12px;
+  }
+  .team-container p {
+    font-size: 12px;
+  }
+  .team-img__box {
+    flex-direction: column;
+  }
+  .team-img__holder img {
+    width: auto;
+  }
+  .spons-text {
+    margin-top: 50px;
+  }
+  .slider-box {
+    height: 470px;
+  }
+  .slider-element img {
+    width: 80%;
+    object-fit: cover;
+    height: 400px;
+  }
+  .bots-container p {
+    font-size: 22px;
+  }
+  .footer-icons > a {
+    height: 18%;
+  }
+  .sofunk-icons__box {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .sofunk-icons__holder {
+    width: 48%;
+  }
 }

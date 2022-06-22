@@ -93,7 +93,7 @@ function App() {
               placeholder="E-MAIL-ADRESSE"
             />
           </div>{" "}
-          <input type="submit" className="main-button" value="jetzt bewerben" />
+          <input type="submit" className="submit-button" value="jetzt bewerben" />
         </form>
 }
 {!isActive && 

@@ -14,7 +14,7 @@ export default function Sponsor() {
           100.000 Kinder und Jugendliche mit mentalem Training ganz unmittelbar
           zu unterstützen. Ebenso großer Dank gilt unseren Multiplikator:innen,
           welche dafür sorgen, dass wir eine immense Reichweite erlangen konnten
-          und Kinder und Jugendliche auch wirklich erreichen. Wir bedanken uns
+          und Kinder und Jugendliche auch wirklich erreichen.<br/><br/> Wir bedanken uns
           ganz herzlich für Ihr Engagement und sind sehr demütig, gemeinsam mit
           Ihnen an dieser so wichtigen Mission zu arbeiten!
         </p>

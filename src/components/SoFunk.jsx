@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 
 export default function SoFunk() {
+  const form = useRef();
+  const [isActive, setIsActive] = useState(true);
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_hdeddls",
+        "template_6vqtdde",
+        form.current,
+        "Fwu-YC9ODO89HFfJw"
+      )
+      .then(
+        setIsActive(!isActive)
+        );
+  };
+
   return (
     <>
       <div className="sofunk-container">
@@ -55,10 +73,27 @@ export default function SoFunk() {
           </a>
         </p>
 
-        <a className="main-button" href="https://youngster.ec3l.com/badges">
-          jetzt bewerben
-        </a>
-        <p>
+        { isActive &&
+        <form ref={form} onSubmit={sendEmail} className="form-holder">
+          <div className="input-box">
+            {" "}
+            <input type="text" name="user_name" required placeholder="NAME" />
+            <input
+              type="email"
+              name="user_email"
+              required
+              placeholder="E-MAIL-ADRESSE"
+            />
+          </div>{" "}
+          <input type="submit" className="submit-button" value="jetzt bewerben" />
+        </form>
+}
+{!isActive && 
+  <p className="input-after">
+    Vielen Dank! Deine Registrierungs-Mail sollte innerhalb weniger Minuten ankommen. Bitte bestätige deine Registrierung durch Klicken auf den Link in der Mail.
+  </p>
+}
+        <p className="sofunk-inf">
           *die Teilnahme ist vollkommen kostenfrei und verpflichtet zu nichts.
           Wir wollen weder deine Daten, noch wollen wir dich mit Werbung
           zuspammen! Unser Ziel ist es, einfach 100.000 Jugendlichen den Zugang
@@ -102,7 +137,7 @@ export default function SoFunk() {
 
         <Link to="/">
           {" "}
-          <div className="main-button" style={{ marginBottom: "150px" }}>
+          <div className="main-button main-bot-but" style={{ marginBottom: "150px" }}>
             Jetzt einlösen
           </div>{" "}
         </Link>

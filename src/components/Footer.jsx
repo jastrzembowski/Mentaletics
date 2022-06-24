@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import fb from "../images/icons/Facebook.png";
 import insta from "../images/icons/Instagram.png";
 import link from "../images/icons/LinkedIn.png";
@@ -27,15 +27,23 @@ export default function Footer() {
         </a>
       </div>
       <div className="footer-text">
-        <Link to="/agb">
-          <p>AGB</p>
-        </Link>
-        <Link to="/datenschutz">
-          <p>Datenschutz</p>
-        </Link>
-        <Link to="/imprissum">
-          <p>Impressum</p>
-        </Link>
+      <NavLink
+        to="/agb"
+        className={({ isActive }) => (isActive ? "link-active" : "link")}
+      >AGB</NavLink>
+         <NavLink
+        to="/datenschutz"
+        className={({ isActive }) => (isActive ? "link-active" : "link")}
+      >
+       Datenschutz
+       </NavLink>
+       <NavLink
+        to="/imprissum"
+        className={({ isActive }) => (isActive ? "link-active" : "link")}
+      >
+   
+          Impressum
+        </NavLink>
       </div>
     </footer>
   );

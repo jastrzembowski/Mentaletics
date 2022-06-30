@@ -16,12 +16,15 @@ export default function Navbar() {
         <span className="nav-icon"></span>
       </label>
       <ul className="menu nav-container" onClick={(e) => unCheck()}>
+      <li className="main-small">
+          <a href="https://youngster.ec3l.com/badges">jetzt registrieren</a>
+        </li>
         <li>
           <NavLink
             to="/funktionierts"
             className={({ isActive }) => (isActive ? "nav-active" : "nav-n")}
           >
-            So Funktioniert´s
+           So Funktioniert&nbsp;´s
           </NavLink>
         </li>
         <li>
@@ -46,25 +49,23 @@ export default function Navbar() {
             to="/sponsorinnen"
             className={({ isActive }) => (isActive ?  "nav-active" : "nav-n")}
           >
-            Sponsorinnen & Sponsoren
+            Sponsorinnen &&nbsp;Sponsoren
           </NavLink>
         </li>
 
         <li>
-          <NavLink
+        <nobr><NavLink
             to="/botschafter"
             className={({ isActive }) => (isActive ?  "nav-active" : "nav-n")}
           >
-            Botschafter :innen
-          </NavLink>
+           Botschafter:innen
+          </NavLink></nobr>
         </li>
-        <li className="main-small">
-          <a href="https://youngster.ec3l.com/badges">jetzt registrieren</a>
-        </li>
+        
       </ul>
 
       <a href="https://youngster.ec3l.com/badges" className="main-button nav-but">
-        jetzt registrieren
+        jetzt&nbsp;registrieren
       </a>
     </nav>
   );
